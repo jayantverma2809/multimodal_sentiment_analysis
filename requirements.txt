@@ -9,6 +9,6 @@ librosa
 soundfile
 pandas
 numpy
-sklearn
+scikit-learn
 jinja2
 aiofiles
