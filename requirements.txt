@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+torch
+torchvision
+torchaudio
+transformers
+opencv-python
+librosa
+soundfile
+pandas
+numpy
+sklearn
+jinja2
+aiofiles
