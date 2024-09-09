@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 from torchvision import models
 from transformers import AutoModel
+import torch.quantization
 
 class VideoModule(nn.Module):
     def __init__(self):
@@ -80,10 +81,6 @@ class MultimodalSentimentAnalysis(nn.Module):
         return output
     
 
-import torch
-import torch.nn as nn
-import torch.quantization
-
 class QuantizedMultimodalSentimentAnalysis(nn.Module):
     def __init__(self, model):
         super().__init__()
@@ -115,6 +112,3 @@ def optimize_for_inference(model):
     traced_model.save("optimized_model.pt")
 
     return traced_model
-
-# Usage in main.py
-optimized_model = optimize_for_inference(model)
